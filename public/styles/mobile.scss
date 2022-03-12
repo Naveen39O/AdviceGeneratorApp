@@ -1,0 +1,43 @@
+@import 'colors.scss';
+body{
+  background-color: $dark-blue;
+  color: $light-cyan;
+  text-align: center;
+}
+
+.card{
+  background-color: $dark-grayish-blue;
+  margin: 100px 15px;
+}
+
+.card-body{
+  padding: 50px 20px;
+}
+
+.advice-id{
+  color: $neon-green;
+  font-size: 10px;
+  font-family: 'Manrope', sans-serif;
+  letter-spacing: 2px;
+}
+
+.advice{
+  font-size: 1.2em;
+  font-weight: 800;
+  font-family: 'Manrope', sans-serif;
+  line-height: 1.5em;
+}
+
+.dice-button{
+  border-radius: 100px;
+  border-style: none;
+  background-color: $neon-green;
+  padding: 15px 21px 21px;
+  position: absolute;
+  right: 138px;
+  bottom: -33px;
+}
+
+.dice-button:hover{
+  box-shadow: 2px 2px 30px 1px $neon-green-blur, -2px -2px 30px 1px $neon-green-blur;
+}
