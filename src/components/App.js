@@ -39,7 +39,7 @@ function App() {
             <Advice advice = {error}/>
             : <Advice advice = {adviceState.advice}/>}
         <PatternDivider/>
-        <button type="button" className ="dice-button" onClick= {() => handleClick()}><img src="/images/icon-dice.svg" alt = "dice, click for new advice"/></button>
+        <button type="button" className ="dice-button" onClick= {() => handleClick()}><img src="images/icon-dice.svg" alt = "dice, click for new advice"/></button>
       </section>
       
     </main>
