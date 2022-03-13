@@ -10,12 +10,23 @@ function App() {
   }
   const [adviceState, setAdvice] = useState(initialState);
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const handleClick = () => {
     setIsLoading(true);
     axios.get("https://api.adviceslip.com/advice")
-      .then((res) => {setAdvice(res.data.slip); setIsLoading(false)})
-      .catch((error) => {console.log(error)});
+      .then((res) => 
+        {
+          setAdvice(res.data.slip); 
+          setIsLoading(false);
+          setError("");
+        })
+      .catch((error) => 
+        {
+          console.log(error);
+          setError(error);
+          setIsLoading(false);
+        });
   }
 
   return (
@@ -24,7 +35,9 @@ function App() {
         <p className="advice-id">ADVICE #{adviceState.id}</p>
         {isLoading? 
           <Advice advice = "Loading"/>
-          : <Advice advice = {adviceState.advice}/>}
+          : error?
+            <Advice advice = {error}/>
+            : <Advice advice = {adviceState.advice}/>}
         <PatternDivider/>
         <button type="button" className ="dice-button" onClick= {() => handleClick()}><img src="/images/icon-dice.svg" alt = "dice"/></button>
       </section>
