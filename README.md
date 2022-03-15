@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Screenshot
 
-![AdviceGeneratorApp]((https://github.com/Naveen39O/AdviceGeneratorApp/blob/main/Screenshot_Advice_generator_app.png)
+![AdviceGeneratorApp](https://github.com/Naveen39O/AdviceGeneratorApp/blob/main/Screenshot_Advice_generator_app.png)
 
 
 ### Links
