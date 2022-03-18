@@ -24,12 +24,10 @@ function Advice(props) {
         {advice}
       </h1>      
       <PatternDivider/>
-      <div className="dice-button">
-        <button type="button" className="visually-hidden" onClick={() => handleClick()}>
-          <img src="images/icon-dice.svg" alt=""/>
-          click for new advice
-        </button>
-      </div>
+      <button type="button" className="dice-button" onClick={() => handleClick()}>
+        <img src="images/icon-dice.svg" alt=""/>
+        <a className="visually-hidden">click for new advice</a>
+      </button>
     </section>
   );
 }
